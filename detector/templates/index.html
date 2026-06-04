@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spam Detector AI</title>
+</head>
+<body>
+
+    <h1>AI Spam Detector</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <textarea
+            name="message"
+            rows="5"
+            cols="50"
+            placeholder="Enter message">
+        </textarea>
+
+        <br><br>
+
+        <button type="submit">
+            Detect
+        </button>
+    </form>
+
+    <h2>{{ result }}</h2>
+
+</body>
+</html>
